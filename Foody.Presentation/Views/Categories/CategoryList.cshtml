@@ -1,0 +1,75 @@
+﻿@model List<Category>
+
+@{
+    ViewData["Title"] = "Category List";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Home</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a href="/">
+                        <i class="icon-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="CategoryList">Categories</a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="CategoryList">Category List</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                        <div class="card-title">Category List Panel</div>
+                        <a asp-action="CreateCategory" class="btn btn-success">Add New Category</a>
+                    </div>
+                    <div class="card-body">
+
+                        <table class="table mt-3 table-hover text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Category Name</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.CategoryName</td>
+                                        <td>@item.Status</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a asp-action="EditCategory" asp-route-id="@item.Id" class="btn btn-warning">Update</a>
+                                                <a  class="btn btn-danger" asp-action="DeleteCategory" asp-route-id="@item.Id" >Delete</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
