@@ -1,4 +1,4 @@
-@model Category
+@model UpdateSliderDto
 
 @{
     ViewData["Title"] = "Category List";
@@ -18,13 +18,13 @@
                     <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                    <a asp-action="CategoryList">Categories</a>
+                    <a asp-action="Index">Sliders</a>
                 </li>
                 <li class="separator">
                     <i class="icon-arrow-right"></i>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Create Categories</a>
+                    <a href="#">Edit About</a>
                 </li>
             </ul>
         </div>
@@ -32,15 +32,22 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Create New Category Panel</div>
+                        <div class="card-title">Update <span
+                                class="text-success text-decoration-underline"></span> Slider Panel
+                        </div>
                     </div>
                     <div class="card-body">
-                        <form asp-action="CreateCategory" method="post">
+                        <form asp-action="EditSlider" method="post">
+                            <input asp-for="Id" hidden />
                             <div class="form-group my-3">
-                                <label asp-for="CategoryName">Category Name</label>
-                                <input asp-for="CategoryName" type="text" class="form-control" />
+                                <label asp-for="Title"></label>
+                                <input asp-for="Title" type="text" class="form-control" />
                             </div>
-                            <button class="btn btn-success">Saved</button>
+                            <div class="form-group my-3">
+                                <label asp-for="ImageUrl"></label>
+                                <input asp-for="ImageUrl" type="text" class="form-control" />
+                            </div>
+                            <button class="btn btn-success">Update Slider</button>
                         </form>
                     </div>
                 </div>

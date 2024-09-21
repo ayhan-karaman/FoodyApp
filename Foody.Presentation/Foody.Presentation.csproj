@@ -2,9 +2,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Foody.Business\Foody.Business.csproj" />
+    <ProjectReference Include="..\Foody.DataObjectTransfers\Foody.DataObjectTransfers.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

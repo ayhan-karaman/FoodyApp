@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foody.Business", "Foody.Bus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foody.Presentation", "Foody.Presentation\Foody.Presentation.csproj", "{593BE8D0-615D-476D-8715-4445E46F167E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foody.DataObjectTransfers", "Foody.DataObjectTransfers\Foody.DataObjectTransfers.csproj", "{D1273CF5-F939-438B-9FCD-679F81073A63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{593BE8D0-615D-476D-8715-4445E46F167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{593BE8D0-615D-476D-8715-4445E46F167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{593BE8D0-615D-476D-8715-4445E46F167E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1273CF5-F939-438B-9FCD-679F81073A63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1273CF5-F939-438B-9FCD-679F81073A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1273CF5-F939-438B-9FCD-679F81073A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1273CF5-F939-438B-9FCD-679F81073A63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
